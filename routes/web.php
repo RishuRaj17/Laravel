@@ -39,9 +39,23 @@ Route::get('/form', function () {
  });
 
 
+
  Route::post('get-userdata', function () {
     dd(request()->all());
 });
+
+
+
+
+
+Route::get('/student',[studentInsertController::class, 'insert from']);
+Route::post('/create',[studentInsertController::class, 'insert']);
+
+Route::get('/cricket/create',[CricketController::class, 'create'])->name('cricket');
+Route::get('/cricket/store',[CricketController::class, 'store'])->name('cricket');
+
+route::get('view-records',[studentInsertController::class, 'student_list']);
+route::get('edit/{id}', [studentInsertController::class, 'edit']);
 
 
 
