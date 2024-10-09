@@ -58,5 +58,5 @@ route::get('view-records',[studentInsertController::class, 'student_list']);
 route::get('edit/{id}', [studentInsertController::class, 'edit']);
 
 
-
+route::get('delete/{id}',[studentInsertController::class, 'delete']);
 ?>
