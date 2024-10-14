@@ -59,4 +59,12 @@ route::get('edit/{id}', [studentInsertController::class, 'edit']);
 
 
 route::get('delete/{id}',[studentInsertController::class, 'delete']);
+
+route::get('delete_all', [studentInsertController::class, 'delete all']);
+
+
+route::view('/form','register');
+route::post('/register', [RegisterController::class, 'register']);
+
+
 ?>
