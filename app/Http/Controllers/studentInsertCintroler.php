@@ -33,7 +33,7 @@ class studentInsertController extends Controller{
         return view('student_edit', ['student' => $student]);
     }
 
-    
+    // wroking on this php project
 }
 
 ?>
