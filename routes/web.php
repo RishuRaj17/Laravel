@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -66,5 +68,7 @@ route::get('delete_all', [studentInsertController::class, 'delete all']);
 route::view('/form','register');
 route::post('/register', [RegisterController::class, 'register']);
 
+Route::get('/form', [FormController::class, 'create'])->name('form.create');
+Route::post('/form', [FormController::class, 'submit'])->name('form.submit');
 
 ?>
