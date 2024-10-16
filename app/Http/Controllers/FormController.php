@@ -38,4 +38,4 @@ class FormController extends Controller
         return back()->with('success', 'Form submitted successfully!');
     }
 }
-?>
+?>+
