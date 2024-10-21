@@ -40,7 +40,14 @@
         @enderror
         <br><br>
 
-        <button type="submit">Submit</button>
+        <label for="password">Confirm Password:</label>
+        <input type="cnfPassword" name="cnfPassword">
+        @error('password')
+            <span>{{ $message }}</span>
+        @enderror
+        <br><br>
+
+        <button type="submit">Register</button>
 
         @if (session('success'))
     <div>
