@@ -71,4 +71,7 @@ route::post('/register', [RegisterController::class, 'register']);
 Route::get('/form', [FormController::class, 'create'])->name('form.create');
 Route::post('/form', [FormController::class, 'submit'])->name('form.submit');
 
+Route::get('/register', [RegisterController::class, 'showForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
+
 ?>
