@@ -80,5 +80,9 @@ Route::get('put-session',[SessionController::class,'storeSession']);
 Route::get('del-session',[SessionController::class,'deleteSession']);
 
 
+Route::get('/select-language', [LanguageController::class, 'showSelectLanguageForm']);
+Route::post('/set-language', [LanguageController::class, 'setLanguage']);
+
+
 
 ?>
