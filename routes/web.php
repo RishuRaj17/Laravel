@@ -74,4 +74,11 @@ Route::post('/form', [FormController::class, 'submit'])->name('form.submit');
 Route::get('/register', [RegisterController::class, 'showForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
 
+
+Route::get('get-session',[SessionController::class,'getSession']);
+Route::get('put-session',[SessionController::class,'storeSession']);
+Route::get('del-session',[SessionController::class,'deleteSession']);
+
+
+
 ?>
