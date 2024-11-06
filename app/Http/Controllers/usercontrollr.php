@@ -1,3 +1,4 @@
+<?php
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -7,9 +8,14 @@ use App\Models\User;
 class RegisterController extends Controller
 {
     // Show registration form
-    public function showForm()
+    public function profile()
     {
-        return view('register');
+        $profileUrl = route('profile');
+        return view('user.profile', ['profileUrl'=>$profileUrl]);
+    }
+
+    public function show($id){
+        return view('user.show', ['userId' => $id]);
     }
 
     // Handle registration form submission
@@ -33,3 +39,4 @@ class RegisterController extends Controller
         return redirect()->route('register')->with('success', 'User registered successfully.');
     }
 }
+?>
