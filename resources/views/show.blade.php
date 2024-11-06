@@ -13,6 +13,9 @@
 
     <img src="{{asset('img2.png')}}" alt="Profile Image" width="150" height="150">
 
-    
+    <p>
+        <a href="{{route('profile'}}">Back to profile</a>
+    </p>
+
 </body>
 </html>
